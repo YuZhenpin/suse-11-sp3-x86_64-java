@@ -1,4 +1,4 @@
-FROM netways/sles-11-sp3-x86_64:latest
+FROM mstormo/suse:11.3
 
 # Java Version
 ENV JAVA_VERSION_MAJOR 7
@@ -7,6 +7,8 @@ ENV JAVA_VERSION_BUILD 13
 ENV JAVA_PACKAGE       jdk
 ARG MAVEN_VERSION=3.2.5
 ARG USER_HOME_DIR="/root"
+
+RUN zypper --non-interactive --no-gpg-checks install curl zip unzip tar
 
 # Download and unarchive Java
 RUN curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie"\
