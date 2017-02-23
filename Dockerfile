@@ -1,10 +1,10 @@
 FROM netways/sles-11-sp3-x86_64:latest
 
 # Java Version
-ENV JAVA_VERSION_MAJOR 8
-ENV JAVA_VERSION_MINOR 45
-ENV JAVA_VERSION_BUILD 14
-ENV JAVA_PACKAGE       server-jre
+ENV JAVA_VERSION_MAJOR 7
+ENV JAVA_VERSION_MINOR 51
+ENV JAVA_VERSION_BUILD 13
+ENV JAVA_PACKAGE       jdk
 
 # Download and unarchive Java
 RUN curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie"\
